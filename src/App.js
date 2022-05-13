@@ -12,7 +12,11 @@ function App() {
   },[])
   return (
     <div className="App">
-  
+      <ul>
+        {
+          users.map(user=><li>{user}</li>)
+        }
+      </ul>
     </div>
   );
 }
