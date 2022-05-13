@@ -13,7 +13,8 @@ function App() {
   },[]);
   const handleSubmit =(e)=>{
     e.preventDefault();
-    console.log("submit")
+    //console.log("submit")
+    const name = nameref.current.value;
     fetch('http://localhost:5000/users',{
       method: 'POST',
       headers:{
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
-        <input type="text" ref={nameref.current.value} name="name" placeholder='enter name'></input>
+        <input type="text" ref={nameref} name="name" placeholder='enter name'></input>
         <input type="submit" placeholder="submit"/>
       </form>
       <ul>
