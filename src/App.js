@@ -8,7 +8,11 @@ function App() {
     .then(res=>res.json())
     .then(data=>setUsers(data))
 
-  },[])
+  },[]);
+  const handleSubmit =(e)=>{
+    e.preventDefault();
+    console.log("submit")
+  }
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
