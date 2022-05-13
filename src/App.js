@@ -15,12 +15,13 @@ function App() {
     e.preventDefault();
     //console.log("submit")
     const name = nameref.current.value;
+    const newUser = {name:name}
     fetch('http://localhost:5000/users',{
       method: 'POST',
       headers:{
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify()
+      body: JSON.stringify(newUser)
     })
   }
   return (
