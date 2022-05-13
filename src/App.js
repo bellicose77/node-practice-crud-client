@@ -23,6 +23,12 @@ function App() {
       },
       body: JSON.stringify(newUser)
     })
+    .then(res =>res.json())
+    .then(data => {
+      const adduser = data;
+      const newData = [...users,adduser];
+      setUsers(newData); 
+    })
   }
   return (
     <div className="App">
