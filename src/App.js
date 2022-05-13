@@ -11,9 +11,13 @@ function App() {
   },[])
   return (
     <div className="App">
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="name" placeholder='enter name'></input>
+        <input type="submit" placeholder="submit"/>
+      </form>
       <ul>
         {
-          users.map(user=> <li>{user}</li>)
+          users.map(user=> <li>{user.name}{user.email}</li>)
         }
       </ul>
     </div>
