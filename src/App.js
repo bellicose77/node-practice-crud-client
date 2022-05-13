@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <ul>
         {
-          users.map(user=><li>{user}</li>)
+          users.map(user=> <li>{user}</li>)
         }
       </ul>
     </div>
